@@ -34,7 +34,12 @@ export default function Home() {
                 Jays Web Diagnostix
               </span>
             </div>
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="flex items-center justify-between w-full md:w-auto">
+              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                Diagnostix
+              </span>
+              {/* Mobile menu button - add later if needed */}
+            </div>
               <a href="#solutions" className="text-gray-600 hover:text-gray-900">Solutions</a>
               <a href="#how-it-works" className="text-gray-600 hover:text-gray-900">How it Works</a>
               <a href="#features" className="text-gray-600 hover:text-gray-900">Features</a>
@@ -49,13 +54,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
                 <Zap className="w-4 h-4 mr-2" />
                 The Diagnostic Layer Your Platform Is Missing
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 md:mb-6">
                 Ratings Tell You <span className="text-blue-600">What Happened.</span>
                 <br />
                 We Tell You <span className="text-blue-600">Where and How to Fix It.</span>
@@ -64,7 +69,7 @@ export default function Home() {
                 Pinpoint exactly where your store is losing customers—checkout, shipping, support, or beyond. 
                 Stop guessing. Start knowing exactly where to focus your team's attention.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a 
                   href="#contact" 
                   className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200"
@@ -196,7 +201,7 @@ export default function Home() {
               Diagnostic tools that transform vague feedback into actionable operational clarity.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
               { icon: <BarChart3 className="w-8 h-8 text-blue-600" />, title: "Friction Analytics", desc: "Know if it's checkout, shipping, or support—instantly." },
               { icon: <TrendingUp className="w-8 h-8 text-blue-600" />, title: "Higher Response Rates", desc: "2-click interface means customers actually complete the feedback." },
@@ -226,7 +231,7 @@ export default function Home() {
               A smarter way to improve user experience—one diagnosed friction point at a time.
             </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               { step: "01", title: "Customer Rates Experience", desc: "1-click star rating captures immediate sentiment." },
               { step: "02", title: "Pinpoint Friction", desc: "Customer taps where friction occurred—checkout, shipping, support, or 'all awesome'." },
@@ -261,7 +266,7 @@ export default function Home() {
               We build the tools that tell you where to focus next. Beyond just reviews—complete operational clarity.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
             {/* Review Widget Card */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white">
@@ -328,7 +333,7 @@ export default function Home() {
               Trusted by Forward-Thinking Store Owners
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {[
               { quote: "Finally, we know *why* customers leave 4 stars instead of 5. This tool changed how we prioritize fixes.", author: "Sarah Chen", role: "Founder, LuxeHome" },
               { quote: "The diagnostic layer is genius. We fixed our checkout friction and saw a 23% lift in conversions.", author: "Marcus Webb", role: "E-commerce Director" },
@@ -354,7 +359,7 @@ export default function Home() {
       {/* Contact Section with Form */}
       <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 Let's Diagnose Your Platform Together
