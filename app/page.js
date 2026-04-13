@@ -32,11 +32,16 @@ export default function Home() {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex justify-between items-center h-16">
-      <div className="flex items-center">
-        <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-          Jays Web Diagnostix
-        </span>
-      </div>
+      <div className="flex items-center gap-2">
+      <img 
+        src="/logo.png" 
+        alt="Jays Diagnostix Logo" 
+        className="w-12 h-12 sm:w-15 sm:h-15 rounded-lg"
+      />
+      <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+        Jays Diagnostix
+      </span>
+    </div>
       
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center space-x-8">
