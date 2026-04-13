@@ -20,49 +20,71 @@ import {
   Users,
   Clock
 } from 'lucide-react';
+import React from 'react';
+import { Menu, X } from 'lucide-react';
 
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Jays Web Diagnostix
-              </span>
-            </div>
-            <div className="flex items-center justify-between w-full md:w-auto">
-              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Diagnostix
-              </span>
-              {/* Mobile menu button - add later if needed */}
-            </div>
-              <a href="#solutions" className="text-gray-600 hover:text-gray-900">Solutions</a>
-              <a href="#how-it-works" className="text-gray-600 hover:text-gray-900">How it Works</a>
-              <a href="#features" className="text-gray-600 hover:text-gray-900">Features</a>
-              <a href="#contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-                Contact Us
-              </a>
-            </div>
-          </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex justify-between items-center h-16">
+      <div className="flex items-center">
+        <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+          Diagnostix
+        </span>
+      </div>
+      
+      {/* Desktop Navigation */}
+      <div className="hidden md:flex items-center space-x-8">
+        <a href="#solutions" className="text-gray-600 hover:text-gray-900">Solutions</a>
+        <a href="#how-it-works" className="text-gray-600 hover:text-gray-900">How it Works</a>
+        <a href="#features" className="text-gray-600 hover:text-gray-900">Features</a>
+        <a href="#contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+          Contact Us
+        </a>
+      </div>
+      
+      {/* Mobile Hamburger Button */}
+      <button 
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+      >
+        {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
+    </div>
+    
+    {/* Mobile Menu Dropdown */}
+    {mobileMenuOpen && (
+      <div className="md:hidden py-4 border-t border-gray-100">
+        <div className="flex flex-col space-y-3">
+          <a href="#solutions" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900 py-2">Solutions</a>
+          <a href="#how-it-works" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900 py-2">How it Works</a>
+          <a href="#features" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900 py-2">Features</a>
+          <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center">
+            Contact Us
+          </a>
         </div>
-      </nav>
+      </div>
+    )}
+  </div>
+</nav>
 
       {/* Hero Section */}
-      <section className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      <section className="pt-20 sm:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
             <div>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
                 <Zap className="w-4 h-4 mr-2" />
                 The Diagnostic Layer Your Platform Is Missing
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 md:mb-6">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 md:mb-6 break-words">
                 Ratings Tell You <span className="text-blue-600">What Happened.</span>
-                <br />
+                <br className="hidden sm:block" />
                 We Tell You <span className="text-blue-600">Where and How to Fix It.</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
@@ -96,83 +118,136 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <Swiper
-              modules={[Autoplay, EffectFade]}
-              effect="fade"
-              autoplay={{
-                delay: 5000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true,
-              }}
-              loop={true}
-              speed={600}
-              className="bg-white rounded-2xl shadow-2xl border border-gray-100"
-            >
-                {/* Slide 1: Static Review Card */}
-                <SwiperSlide data-swiper-autoplay="6000">
-                  <div className="p-6">
-                    <div className="bg-gray-50 rounded-xl p-6">
-                      <div className="flex items-center justify-center mb-6">
-                        <div className="flex gap-1">
-                          {[1,2,3,4,5].map((star) => (
-                            <Star key={star} className="w-8 h-20 fill-yellow-400 text-yellow-400" />
-                          ))}
-                        </div>
-                      </div>
-                      <div className="space-y-4">
-                        <div className="bg-white p-4 rounded-lg border border-gray-200">
-                          <p className="font-medium text-gray-900 mb-2">What part of your experience could we improve?</p>
-                          <div className="space-y-2">
-                            {['Checkout process', 'Shipping & delivery', 'Customer support', 'Website navigation', 'All of it was awesome ✨'].map((item) => (
-                              <label key={item} className="flex items-center p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
-                                <input type="radio" name="issue" className="mr-3" />
-                                <span>{item}</span>
-                              </label>
-                            ))}
-                          </div>
-                        </div>
-                        <div className="bg-white p-4 rounded-lg border border-gray-200">
-                          <textarea 
-                            placeholder="Any details you'd like to add? (Optional)" 
-                            className="w-full p-3 border border-gray-200 rounded-lg resize-none"
-                            rows={2}
-                          />
-                        </div>
-                        <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-                          Submit Feedback
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </SwiperSlide>
-
-                {/* Slide 2: Animated GIF Demo */}
-                <SwiperSlide data-swiper-autoplay="25000">
-
-                  <div className="p-6">
-                    <div className="bg-gray-50 rounded-xl p-6 flex items-center justify-center">
-                      <img 
-                        src="/demo.gif" 
-                        alt="Diagnostix widget demo showing 3-star rating and friction point selection"
-                        className="w-full h-165 rounded-lg"
-                      />
-                    </div>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-              
-              {/* Keep the waitlist link below the swiper */}
-              <div className="mt-6">
-                <a 
-                  href="https://tally.so/r/Zjzek5" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700"
-                >
-                  Join Waitlist <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
+  {/* Mobile: Stacked layout / Desktop: Swiper */}
+  <>
+    {/* Mobile View - Stacked */}
+    <div className="block md:hidden space-y-6">
+      {/* Review Card */}
+      <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
+        <div className="bg-gray-50 rounded-xl p-6">
+          <div className="flex items-center justify-center mb-6">
+            <div className="flex gap-1">
+              {[1,2,3,4,5].map((star) => (
+                <Star key={star} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+          </div>
+          <div className="space-y-4">
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <p className="font-medium text-gray-900 mb-2">What part of your experience could we improve?</p>
+              <div className="space-y-2">
+                {['Checkout process', 'Shipping & delivery', 'Customer support', 'Website navigation', 'All of it was awesome ✨'].map((item) => (
+                  <label key={item} className="flex items-center p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
+                    <input type="radio" name="issue" className="mr-3" />
+                    <span className="text-sm sm:text-base">{item}</span>
+                  </label>
+                ))}
               </div>
             </div>
+            <div className="bg-white p-4 rounded-lg border border-gray-200">
+              <textarea 
+                placeholder="Any details you'd like to add? (Optional)" 
+                className="w-full p-3 border border-gray-200 rounded-lg resize-none text-sm"
+                rows={2}
+              />
+            </div>
+            <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+              Submit Feedback
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      {/* GIF Demo */}
+      <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
+        <div className="bg-gray-50 rounded-xl p-6 flex items-center justify-center">
+          <img 
+            src="/demo.gif" 
+            alt="Diagnostix widget demo"
+            className="w-full h-auto max-h-[400px] object-contain rounded-lg"
+          />
+        </div>
+      </div>
+    </div>
+
+    {/* Desktop View - Swiper */}
+    <div className="hidden md:block">
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        effect="fade"
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        loop={true}
+        speed={600}
+        className="bg-white rounded-2xl shadow-2xl border border-gray-100"
+      >
+        <SwiperSlide data-swiper-autoplay="6000">
+          <div className="p-6">
+            <div className="bg-gray-50 rounded-xl p-6">
+              <div className="flex items-center justify-center mb-6">
+                <div className="flex gap-1">
+                  {[1,2,3,4,5].map((star) => (
+                    <Star key={star} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+              </div>
+              <div className="space-y-4">
+                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                  <p className="font-medium text-gray-900 mb-2">What part of your experience could we improve?</p>
+                  <div className="space-y-2">
+                    {['Checkout process', 'Shipping & delivery', 'Customer support', 'Website navigation', 'All of it was awesome ✨'].map((item) => (
+                      <label key={item} className="flex items-center p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
+                        <input type="radio" name="issue" className="mr-3" />
+                        <span>{item}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-gray-200">
+                  <textarea 
+                    placeholder="Any details you'd like to add? (Optional)" 
+                    className="w-full p-3 border border-gray-200 rounded-lg resize-none"
+                    rows={2}
+                  />
+                </div>
+                <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+                  Submit Feedback
+                </button>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide data-swiper-autoplay="25000">
+          <div className="p-6">
+            <div className="bg-gray-50 rounded-xl p-6 flex items-center justify-center">
+              <img 
+                src="/demo.gif" 
+                alt="Diagnostix widget demo"
+                className="w-full h-auto max-h-[500px] object-contain rounded-lg"
+              />
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
+  </>
+  
+  {/* Waitlist link */}
+  <div className="mt-6">
+    <a 
+      href="https://tally.so/r/Zjzek5" 
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700"
+    >
+      Join Waitlist <ArrowRight className="ml-2 w-4 h-4" />
+    </a>
+  </div>
+</div>
           </div>
         </div>
       </section>

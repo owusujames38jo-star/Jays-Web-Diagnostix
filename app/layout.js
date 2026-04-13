@@ -12,9 +12,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Create Next App",
-  description: "Diagnostic review widget for e-commerce",
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  title: 'Diagnostix',
+  description: 'Diagnostic review widget for e-commerce',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({ children }) {
