@@ -34,7 +34,7 @@ export default function Home() {
     <div className="flex justify-between items-center h-16">
       <div className="flex items-center">
         <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-          Diagnostix
+          Jays Web Diagnostix
         </span>
       </div>
       
@@ -89,6 +89,7 @@ export default function Home() {
               </h1>
               <p className="text-xl text-gray-600 mb-8">
                 Pinpoint exactly where your store is losing customers—checkout, shipping, support, or beyond. 
+                <span className="font-semibold text-gray-800">Fully automated.</span> Zero maintenance. 
                 Stop guessing. Start knowing exactly where to focus your team's attention.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
