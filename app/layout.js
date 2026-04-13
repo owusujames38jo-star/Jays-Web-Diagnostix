@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'Diagnostix',
+  title: 'Jays Diagnostix',
   description: 'Diagnostic review widget for e-commerce',
 };
 
