@@ -261,7 +261,7 @@ export default function Home() {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Traditional review platforms tell you *what* rating you got. We analyze the *why* behind every interaction, 
-            diagnosing friction points across your entire user journey.
+            diagnosing friction points across your entire user journey—<span className="font-semibold">all on autopilot.</span>
           </p>
         </div>
       </section>
@@ -282,7 +282,7 @@ export default function Home() {
               { icon: <BarChart3 className="w-8 h-8 text-blue-600" />, title: "Friction Analytics", desc: "Know if it's checkout, shipping, or support—instantly." },
               { icon: <TrendingUp className="w-8 h-8 text-blue-600" />, title: "Higher Response Rates", desc: "2-click interface means customers actually complete the feedback." },
               { icon: <Users className="w-8 h-8 text-blue-600" />, title: "Micro-Decision Insights", desc: "See exactly where users hesitate or drop off." },
-              { icon: <Clock className="w-8 h-8 text-blue-600" />, title: "Weekly Diagnosis", desc: "Automated reports pinpoint what to fix first." }
+              { icon: <Clock className="w-8 h-8 text-blue-600" />, title: "Automated Weekly Diagnosis", desc: "Set it and forget it. Reports arrive automatically—zero ongoing work required." }
             ].map((feature, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
                 <div className="bg-blue-50 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
@@ -311,7 +311,7 @@ export default function Home() {
             {[
               { step: "01", title: "Customer Rates Experience", desc: "1-click star rating captures immediate sentiment." },
               { step: "02", title: "Pinpoint Friction", desc: "Customer taps where friction occurred—checkout, shipping, support, or 'all awesome'." },
-              { step: "03", title: "Receive Weekly Diagnosis", desc: "You get a report of exactly where to focus improvements." },
+              { step: "03", title: "Automated Diagnosis Arrives", desc: "Weekly reports land in your inbox automatically. No manual analysis needed." },
               { step: "04", title: "Fix & Optimize", desc: "Implement changes and watch ratings improve." }
             ].map((item, idx) => (
               <div key={idx} className="relative">
@@ -354,6 +354,7 @@ export default function Home() {
                   {[
                     "Know if it's checkout, shipping, or support—instantly",
                     "Higher response rates with minimal friction",
+                    "Fully automated—set up once, runs forever",
                     "Weekly diagnostic reports delivered to your inbox",
                     "Seamless integration with Shopify, WooCommerce & more"
                   ].map((item, i) => (
