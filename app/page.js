@@ -27,7 +27,7 @@ import { Menu, X } from 'lucide-react';
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,7 +76,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-20 sm:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center overflow-hidden w-full max-w-full">
             <div>
               <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
                 <Zap className="w-4 h-4 mr-2" />
@@ -171,19 +171,19 @@ export default function Home() {
     </div>
 
     {/* Desktop View - Swiper */}
-    <div className="hidden md:block">
-      <Swiper
-        modules={[Autoplay, EffectFade]}
-        effect="fade"
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        }}
-        loop={true}
-        speed={600}
-        className="bg-white rounded-2xl shadow-2xl border border-gray-100"
-      >
+<div className="hidden md:block w-full max-w-full overflow-hidden">
+  <Swiper
+    modules={[Autoplay, EffectFade]}
+    effect="fade"
+    autoplay={{
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    }}
+    loop={true}
+    speed={600}
+    className="bg-white rounded-2xl shadow-2xl border border-gray-100 w-full"
+  >
         <SwiperSlide data-swiper-autoplay="6000">
           <div className="p-6">
             <div className="bg-gray-50 rounded-xl p-6">

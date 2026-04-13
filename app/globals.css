@@ -24,3 +24,22 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Fix for 768px tablet overflow */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .swiper,
+  .swiper-wrapper,
+  .swiper-slide {
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
