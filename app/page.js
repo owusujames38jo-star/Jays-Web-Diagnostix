@@ -36,7 +36,7 @@ export default function Home() {
       <img 
         src="/logo.png" 
         alt="Jays Diagnostix Logo" 
-        className="w-12 h-12 sm:w-15 sm:h-15 rounded-lg"
+        className="w-8 h8 sm:w-15 sm:h-15 rounded-lg"
       />
       <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
         Jays Diagnostix
@@ -87,10 +87,10 @@ export default function Home() {
                 <Zap className="w-4 h-4 mr-2" />
                 The Diagnostic Layer Your Platform Is Missing
               </div>
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-4 md:mb-6 break-words">
-                Ratings Tell You <span className="text-blue-600">What Happened.</span>
+              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4 md:mb-6 break-words">
+                Honest ratings. <span className="text-blue-600">Diagnostix.</span>
                 <br className="hidden sm:block" />
-                We Tell You <span className="text-blue-600">Where and How to Fix It.</span>
+                Eliminate <span className="text-blue-600">The Friction.</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
                 Pinpoint exactly where your store is losing customers—checkout, shipping, support, or beyond. 
@@ -315,7 +315,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               { step: "01", title: "Customer Rates Experience", desc: "1-click star rating captures immediate sentiment." },
-              { step: "02", title: "Pinpoint Friction", desc: "Customer taps where friction occurred—checkout, shipping, support, or 'all awesome'." },
+              { step: "02", title: "Troubleshot and Pinpoint Friction", desc: "Customer taps where friction occurred—checkout, shipping, support, or 'all awesome'." },
               { step: "03", title: "Automated Diagnosis Arrives", desc: "Weekly reports land in your inbox automatically. No manual analysis needed." },
               { step: "04", title: "Fix & Optimize", desc: "Implement changes and watch ratings improve." }
             ].map((item, idx) => (

@@ -43,3 +43,49 @@ body {
     height: auto !important;
   }
 }
+
+/* ============================================ */
+/* SUBTLE GLASS EFFECTS                         */
+/* ============================================ */
+
+/* Navigation - subtle glass */
+nav {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Hero section - very subtle */
+section:first-of-type {
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8), rgba(255, 255, 255, 0.9)) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+/* Cards and containers - subtle elevation */
+.bg-white {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.bg-gray-50 {
+  background-color: rgba(249, 250, 251, 0.85) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Feature cards - more opaque for readability */
+.feature-card,
+.grid > div {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Contact form card */
+form,
+.bg-white.rounded-2xl.shadow-lg {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
