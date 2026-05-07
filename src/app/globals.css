@@ -88,6 +88,16 @@ nav button svg {
   fill: rgb(75, 85, 99) !important;
 }
 
+/* Mobile hero section responsiveness */
+@media (max-width: 768px) {
+  #hero {
+    /* Adjust height for mobile so the image fits better */
+    min-height: 50vh; 
+    /* Use a slightly different position if the text gets cut off */
+    background-position: 50% 50%; 
+  }
+}
+
 /* Contact form card */
 form,
 .bg-white.rounded-2xl.shadow-lg {

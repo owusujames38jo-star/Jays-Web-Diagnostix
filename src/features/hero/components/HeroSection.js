@@ -28,7 +28,7 @@ export default function HeroSection() {
 {/* Hero Section */}
       <section id="hero" className="pt-20 sm:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden ">
         {/* Background image with overlay */}
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/backroung.png)', backgroundPosition: 'center', backgroundSize: '100vw 120vh', backgroundRepeat: 'no-repeat' }} />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/backroung.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} />
         
         {/* Light overlay for text readability */}
         <div className="absolute inset-0 bg-white/60" />
@@ -38,13 +38,49 @@ export default function HeroSection() {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-center items-center min-h-[80vh] overflow-hidden w-full max-w-full">
             <div className=" bg-transparent !important" style={{ backgroundColor: 'transparent !important' }}>
-              <h1 className="text-center text-2xl sm:text-2xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4 md:mb-6 break-words">
-                Equipping Businesses with  <span className="text-gray-800">Custom software systems </span>
-                <br className="hidden sm:block" />
-              </h1>
+              {/* Orbital ring wrapper with sea blue glass effect */}
+              <div className="relative mx-auto max-w-4xl py-8 sm:py-12">
+                
+                {/* Outer orbital ring - sea blue glass */}
+                <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: '1' }}>
+                  <div 
+                    className="w-full h-32 sm:h-40 lg:h-48 rounded-[50%] border-2"
+                    style={{ 
+                      borderColor: 'rgba(34, 211, 238, 0.3)',
+                      boxShadow: '0 0 40px rgba(34, 211, 238, 0.2), inset 0 0 20px rgba(34, 211, 238, 0.1)',
+                      transform: 'rotateX(45deg)',
+                      background: 'radial-gradient(ellipse at center, rgba(34, 211, 238, 0.05) 0%, rgba(34, 211, 238, 0.02) 50%, transparent 100%)',
+                      backdropFilter: 'blur(8px)',
+                      WebkitBackdropFilter: 'blur(8px)'
+                    }} 
+                  />
+                </div>
+
+                {/* Inner orbital ring - deeper sea blue glass */}
+                <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: '2' }}>
+                  <div 
+                    className="w-[85%] h-24 sm:h-28 lg:h-36 rounded-[50%] border"
+                    style={{ 
+                      borderColor: 'rgba(59, 130, 246, 0.25)',
+                      boxShadow: '0 0 30px rgba(59, 130, 246, 0.15), inset 0 0 15px rgba(59, 130, 246, 0.08)',
+                      transform: 'rotateX(40deg) translateY(-4px)',
+                      background: 'radial-gradient(ellipse at center, rgba(59, 130, 246, 0.04) 0%, rgba(59, 130, 246, 0.01) 50%, transparent 100%)',
+                      backdropFilter: 'blur(6px)',
+                      WebkitBackdropFilter: 'blur(6px)'
+                    }} 
+                  />
+                </div>
+
+                {/* Headline text */}
+                <h1 className="relative z-10 text-center text-2xl sm:text-3xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4 md:mb-6 break-words" style={{ zIndex: '20' }}>
+                  Equipping Businesses with <span className="text-gray-800">Custom software systems</span>
+                  <br className="hidden sm:block" />
+                </h1>
+
+              </div>
               
               <div className="max-w-3xl mx-auto">
-                <p className="text-center text-lg text-black mb-30">
+                <p className="text-center text-sm sm:text-lg text-black mb-50">
                   Diagnose the exact friction points in your business or beyond, provides efficient and automation tools such as Inventory systems, dashboards, , internal platforms, 
                   <span className="font-semibold text-black"> and custom business software tailored to your operations.</span>
                 </p>
