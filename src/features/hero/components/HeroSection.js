@@ -4,6 +4,7 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
+import React from 'react';
 import { 
   Star, 
   Zap, 
@@ -20,89 +21,40 @@ import {
   Users,
   Clock
 } from 'lucide-react';
-import React from 'react';
-import { Menu, X } from 'lucide-react';
 
-
-export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+export default function HeroSection() {
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex justify-between items-center h-16">
-      <div className="flex items-center gap-2">
-      <img 
-        src="/logo.png" 
-        alt="Jays Diagnostix Logo" 
-        className="w-8 h8 sm:w-15 sm:h-15 rounded-lg"
-      />
-      <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-        Jays Diagnostix
-      </span>
-    </div>
-      
-      {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center space-x-8">
-        <a href="#solutions" className="text-gray-600 hover:text-gray-900">Solutions</a>
-        <a href="#how-it-works" className="text-gray-600 hover:text-gray-900">How it Works</a>
-        <a href="#features" className="text-gray-600 hover:text-gray-900">Features</a>
-        <a href="#contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-          Contact Us
-        </a>
-      </div>
-      
-      {/* Mobile Hamburger Button */}
-      <button 
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
-      >
-        {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
-    </div>
-    
-    {/* Mobile Menu Dropdown */}
-    {mobileMenuOpen && (
-      <div className="md:hidden py-4 border-t border-gray-100">
-        <div className="flex flex-col space-y-3">
-          <a href="#solutions" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900 py-2">Solutions</a>
-          <a href="#how-it-works" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900 py-2">How it Works</a>
-          <a href="#features" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900 py-2">Features</a>
-          <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center">
-            Contact Us
-          </a>
-        </div>
-      </div>
-    )}
-  </div>
-</nav>
-
-      {/* Hero Section */}
-      <section className="pt-20 sm:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <>
+{/* Hero Section */}
+      <section id="hero" className="pt-20 sm:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden ">
+        {/* Background image with overlay */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/backroung.png)', backgroundPosition: 'center', backgroundSize: '100vw 120vh', backgroundRepeat: 'no-repeat' }} />
+        
+        {/* Light overlay for text readability */}
+        <div className="absolute inset-0 bg-white/60" />
+        
+        {/* Content container */}
+        <div className="relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center overflow-hidden w-full max-w-full">
-            <div>
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-medium mb-6">
-                <Zap className="w-4 h-4 mr-2" />
-                The Diagnostic Layer Your Platform Is Missing
-              </div>
-              <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4 md:mb-6 break-words">
-                Honest ratings. <span className="text-blue-600">Diagnostix.</span>
+          <div className="flex justify-center items-center min-h-[80vh] overflow-hidden w-full max-w-full">
+            <div className=" bg-transparent !important" style={{ backgroundColor: 'transparent !important' }}>
+              <h1 className="text-center text-2xl sm:text-2xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4 md:mb-6 break-words">
+                Equipping Businesses with  <span className="text-gray-800">Custom software systems </span>
                 <br className="hidden sm:block" />
-                Eliminate <span className="text-blue-600">The Friction.</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Pinpoint exactly where your store is losing customers—checkout, shipping, support, or beyond. 
-                <span className="font-semibold text-gray-800">Fully automated.</span> Zero maintenance. 
-                Stop guessing. Start knowing exactly where to focus your team's attention.
-              </p>
+              
+              <div className="max-w-3xl mx-auto">
+                <p className="text-center text-lg text-black mb-30">
+                  Diagnose the exact friction points in your business or beyond, provides efficient and automation tools such as Inventory systems, dashboards, , internal platforms, 
+                  <span className="font-semibold text-black"> and custom business software tailored to your operations.</span>
+                </p>
+              </div>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a 
                   href="#contact" 
                   className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200"
                 >
-                  Get Early Access
+                  Discuss Your Workflow
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
                 <a 
@@ -118,148 +70,20 @@ export default function Home() {
                     <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white" />
                   ))}
                 </div>
-                <p className="text-gray-600">
-                  <span className="font-bold text-gray-900">47+ store owners</span> already joined the waitlist
+                <p className="text-gray-800">
+                  <span className="font-bold text-gray-800">47+ store owners</span> already joined the waitlist
                 </p>
               </div>
             </div>
             <div className="relative">
-  {/* Mobile: Stacked layout / Desktop: Swiper */}
-  <>
-    {/* Mobile View - Stacked */}
-    <div className="block md:hidden space-y-6">
-      {/* Review Card */}
-      <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
-        <div className="bg-gray-50 rounded-xl p-6">
-          <div className="flex items-center justify-center mb-6">
-            <div className="flex gap-1">
-              {[1,2,3,4,5].map((star) => (
-                <Star key={star} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
-              ))}
+            
             </div>
-          </div>
-          <div className="space-y-4">
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <p className="font-medium text-gray-900 mb-2">What part of your experience could we improve?</p>
-              <div className="space-y-2">
-                {['Checkout process', 'Shipping & delivery', 'Customer support', 'Website navigation', 'All of it was awesome ✨'].map((item) => (
-                  <label key={item} className="flex items-center p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
-                    <input type="radio" name="issue" className="mr-3" />
-                    <span className="text-sm sm:text-base">{item}</span>
-                  </label>
-                ))}
-              </div>
             </div>
-            <div className="bg-white p-4 rounded-lg border border-gray-200">
-              <textarea 
-                placeholder="Any details you'd like to add? (Optional)" 
-                className="w-full p-3 border border-gray-200 rounded-lg resize-none text-sm"
-                rows={2}
-              />
-            </div>
-            <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-              Submit Feedback
-            </button>
           </div>
         </div>
-      </div>
       
-      {/* GIF Demo */}
-      <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
-        <div className="bg-gray-50 rounded-xl p-6 flex items-center justify-center">
-          <img 
-            src="/demo.gif" 
-            alt="Diagnostix widget demo"
-            className="w-full h-auto max-h-[400px] object-contain rounded-lg"
-          />
-        </div>
-      </div>
-    </div>
-
-    {/* Desktop View - Swiper */}
-<div className="hidden md:block w-full max-w-full overflow-hidden">
-  <Swiper
-    modules={[Autoplay, EffectFade]}
-    effect="fade"
-    autoplay={{
-      delay: 5000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    }}
-    loop={true}
-    speed={600}
-    className="bg-white rounded-2xl shadow-2xl border border-gray-100 w-full"
-  >
-        <SwiperSlide data-swiper-autoplay="6000">
-          <div className="p-6">
-            <div className="bg-gray-50 rounded-xl p-6">
-              <div className="flex items-center justify-center mb-6">
-                <div className="flex gap-1">
-                  {[1,2,3,4,5].map((star) => (
-                    <Star key={star} className="w-8 h-8 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <p className="font-medium text-gray-900 mb-2">What part of your experience could we improve?</p>
-                  <div className="space-y-2">
-                    {['Checkout process', 'Shipping & delivery', 'Customer support', 'Website navigation', 'All of it was awesome ✨'].map((item) => (
-                      <label key={item} className="flex items-center p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100">
-                        <input type="radio" name="issue" className="mr-3" />
-                        <span>{item}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-                <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <textarea 
-                    placeholder="Any details you'd like to add? (Optional)" 
-                    className="w-full p-3 border border-gray-200 rounded-lg resize-none"
-                    rows={2}
-                  />
-                </div>
-                <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-                  Submit Feedback
-                </button>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide data-swiper-autoplay="25000">
-          <div className="p-6">
-            <div className="bg-gray-50 rounded-xl p-6 flex items-center justify-center">
-              <img 
-                src="/demo.gif" 
-                alt="Diagnostix widget demo"
-                className="w-full h-auto max-h-[500px] object-contain rounded-lg"
-              />
-            </div>
-          </div>
-        </SwiperSlide>
-      </Swiper>
-    </div>
-  </>
-  
-  {/* Waitlist link */}
-  <div className="mt-6">
-    <a 
-      href="https://tally.so/r/Zjzek5" 
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700"
-    >
-      Join Waitlist <ArrowRight className="ml-2 w-4 h-4" />
-    </a>
-  </div>
-</div>
-          </div>
-        </div>
-      </section>
 
       {/* Problem Statement */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Stop Guessing. <span className="text-blue-600">Start Knowing.</span>
@@ -349,7 +173,7 @@ export default function Home() {
           </div>
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
             {/* Review Widget Card */}
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+            {/* <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
               <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white">
                 <h3 className="text-2xl font-bold mb-2">Review Diagnostic Widget</h3>
                 <p className="text-blue-100">The 2-click review widget that tells you which part of your store is broken.</p>
@@ -375,7 +199,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* Future Tool Placeholder */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden opacity-75 hover:opacity-100 transition">
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
@@ -520,25 +344,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Diagnostix
-              </span>
-              <p className="text-gray-500 text-sm mt-1">© 2026 All rights reserved.</p>
-            </div>
-            <div className="flex space-x-6">
-              <a href="#" className="text-gray-500 hover:text-gray-900">Twitter</a>
-              <a href="#" className="text-gray-500 hover:text-gray-900">LinkedIn</a>
-              <a href="#" className="text-gray-500 hover:text-gray-900">Privacy</a>
-              <a href="#" className="text-gray-500 hover:text-gray-900">Terms</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+        </>
   );
 }

@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  background-image: url(/backroung.png);
+  --background: #63a6ff;
   --foreground: #171717;
 }
 
@@ -50,15 +51,14 @@ body {
 
 /* Navigation - subtle glass */
 nav {
-  background-color: rgba(255, 255, 255, 0.7) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
 }
 
 /* Hero section - very subtle */
 section:first-of-type {
-  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8), rgba(255, 255, 255, 0.9)) !important;
+  background: linear-gradient(135deg, rgba(71, 93, 114, 0.8), rgba(71, 124, 173, 0.9)) !important;
   backdrop-filter: blur(4px) !important;
   -webkit-backdrop-filter: blur(4px) !important;
 }
@@ -80,6 +80,12 @@ section:first-of-type {
 .feature-card,
 .grid > div {
   background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Mobile menu button icons override */
+nav button svg {
+  color: rgb(75, 85, 99) !important;
+  fill: rgb(75, 85, 99) !important;
 }
 
 /* Contact form card */
