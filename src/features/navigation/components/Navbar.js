@@ -41,7 +41,7 @@ React.useEffect(() => {
       <div className="text-sm hidden lg:flex items-center space-x-8">
         <a href="#features" className="text-gray-600 hover:text-gray-900">ABOUT</a>
         <a href="#solutions" className="text-gray-600 hover:text-gray-900">SOLUTIONS</a>
-        <a href="#how-it-works" className="text-gray-600 hover:text-gray-900">How it Works</a>
+        <a href="#how-it-works" className="text-gray-600 hover:text-gray-900">FEATURES</a>
         <a href="#contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
           Contact Us
         </a>

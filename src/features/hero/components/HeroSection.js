@@ -352,7 +352,12 @@ export default function HeroSection() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Mail className="w-6 h-6 text-blue-600 mr-3" />
-                  <span className="text-gray-700">owusujames38.jo@gmail.com</span>
+                  <a 
+                    href="mailto:owusujames38.jo@gmail.com?subject=Let's%20diagnose%20my%20workflow&body=Hi%20James,%0D%0A%0D%0AI'd%20like%20to%20discuss%20a%20software%20solution%20for%20my%20business."
+                    className="text-gray-700 hover:text-blue-600 transition"
+                  >
+                    owusujames38.jo@gmail.com
+                  </a>
                 </div>
                 <div className="flex items-center">
                   <MessageSquare className="w-6 h-6 text-blue-600 mr-3" />
