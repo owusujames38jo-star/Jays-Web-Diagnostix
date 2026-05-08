@@ -206,18 +206,18 @@ export default function HeroSection() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Analyze. Diagnose. <span className="text-blue-600">Optimize.</span>
+              Analyze Operations, Architect Solutions, Build Systems <span className="text-blue-600">and Optimization</span>
             </h2>
             <p className="text-xl text-gray-600">
-              A smarter way to improve user experience—one diagnosed friction point at a time.
+              From workflow analysis to implementation, every step is designed to uncover bottlenecks and engineer scalable business solutions.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
-              { step: "01", title: "Customer Rates Experience", desc: "1-click star rating captures immediate sentiment." },
-              { step: "02", title: "Troubleshot and Pinpoint Friction", desc: "Customer taps where friction occurred—checkout, shipping, support, or 'all awesome'." },
-              { step: "03", title: "Automated Diagnosis Arrives", desc: "Weekly reports land in your inbox automatically. No manual analysis needed." },
-              { step: "04", title: "Fix & Optimize", desc: "Implement changes and watch ratings improve." }
+              { step: "01", title: "Operational Discovery", desc: "We analyze how your business currently operates, where delays happen, and where workflows begin to break down." },
+              { step: "02", title: "Workflow & System Diagnosis", desc: "We identify operational bottlenecks, disconnected systems, repetitive manual work, and opportunities for automation." },
+              { step: "03", title: "Solution Architecture", desc: "We design scalable software structures tailored to your workflow, operational goals, and future growth requirements." },
+              { step: "04", title: "Implementation & Optimization", desc: "We build, refine, and continuously improve the software system to ensure operational efficiency and long-term scalability." }
             ].map((item, idx) => (
               <div key={idx} className="relative">
                 {idx < 3 && (
@@ -241,10 +241,10 @@ export default function HeroSection() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Diagnostic Tools for Smarter E‑Commerce Decisions
+              Software Systems Built Around Operational Clarity
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We build the tools that tell you where to focus next. Beyond just reviews—complete operational clarity.
+              From internal dashboards to workflow automation and operational platforms, every system is designed around how your business actually functions.
             </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
@@ -279,15 +279,15 @@ export default function HeroSection() {
             {/* Future Tool Placeholder */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden opacity-75 hover:opacity-100 transition">
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Conversion Funnel Auditor</h3>
+                <h3 className="text-2xl font-bold mb-2">Example Solutions</h3>
                 <p className="text-purple-100">Coming Q3 2026 • Identify exactly where users drop off in your funnel.</p>
               </div>
               <div className="p-6">
                 <ul className="space-y-3">
                   {[
-                    "Visual funnel mapping with friction detection",
-                    "Session replay integration",
-                    "Automated improvement suggestions",
+                    "Centralize workflows, analytics, reporting, and operational visibility into one system.",
+                    "Reduce repetitive manual processes through tailored automation systems.",
+                    "Track operations, inventory movement, fulfillment, and internal workflows in real time.",
                     "A/B test recommendations"
                   ].map((item, i) => (
                     <li key={i} className="flex items-start">
