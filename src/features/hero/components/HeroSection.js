@@ -39,7 +39,7 @@ export default function HeroSection() {
           <div className="flex justify-center items-center min-h-[80vh] overflow-hidden w-full max-w-full">
             <div className=" bg-transparent !important" style={{ backgroundColor: 'transparent !important' }}>
               {/* Orbital ring wrapper with sea blue glass effect */}
-              <div className="relative mx-auto max-w-4xl py-8 sm:py-12">
+              <div className="relative mx-auto max-w-4xl py-12 sm:py-16 lg:py-20">
                 
                 {/* Outer orbital ring - sea blue glass */}
                 <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: '1' }}>
@@ -79,8 +79,8 @@ export default function HeroSection() {
 
               </div>
               
-              <div className="max-w-3xl mx-auto">
-                <p className="text-center text-sm sm:text-lg text-black mb-50">
+              <div className="max-w-3xl mx-auto mb-60">
+                <p className="text-center text-sm sm:text-lg text-black mb-8 sm:mb-12">
                   Diagnose the exact friction points in your business or beyond, provides efficient and automation tools such as Inventory systems, dashboards, , internal platforms, 
                   <span className="font-semibold text-black"> and custom business software tailored to your operations.</span>
                 </p>
