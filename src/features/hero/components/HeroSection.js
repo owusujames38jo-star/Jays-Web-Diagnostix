@@ -39,19 +39,19 @@ export default function HeroSection() {
           <div className="flex justify-center items-center min-h-[80vh] overflow-hidden w-full max-w-full">
             <div className=" bg-transparent !important" style={{ backgroundColor: 'transparent !important' }}>
               {/* Orbital ring wrapper with sea blue glass effect */}
-              <div className="relative mx-auto max-w-4xl py-12 sm:py-16 lg:py-20 translate-y-20 sm:translate-y-0 lg:translate-y-0">
+              <div className="relative mx-auto max-w-4xl py-12 sm:py-16 lg:py-20 md:translate-y-[-40px] lg:translate-y-[-40px] translate-y-20 sm:translate-y-0 lg:translate-y-0">
                 
                 {/* Outer orbital ring - sea blue glass */}
-                <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: '1' }}>
+                <div className="absolute inset-0 flex items-center justify-center translate-y-[-40px] md:translate-y-[-40px] lg:translate-y-[-40px]" style={{ zIndex: '5' }}>
                   <div 
                     className="w-full h-32 sm:h-40 lg:h-48 rounded-[50%] border-2"
                     style={{ 
-                      borderColor: 'rgba(34, 211, 238, 0.3)',
-                      boxShadow: '0 0 40px rgba(34, 211, 238, 0.2), inset 0 0 20px rgba(34, 211, 238, 0.1)',
+                      borderColor: 'rgba(21, 85, 158, 0.3)',
+                      boxShadow: '0 0 40px rgba(10, 119, 161, 0.2), inset 0 0 20px rgba(34, 211, 238, 0.1)',
                       transform: 'rotateX(45deg)',
-                      background: 'radial-gradient(ellipse at center, rgba(34, 211, 238, 0.05) 0%, rgba(34, 211, 238, 0.02) 50%, transparent 100%)',
-                      backdropFilter: 'blur(8px)',
-                      WebkitBackdropFilter: 'blur(8px)'
+                      background: 'radial-gradient(ellipse at center, rgba(6, 112, 161, 0.05) 0%, rgba(13, 93, 197, 0.02) 50%, transparent 100%)',
+                      backdropFilter: 'blur(5px)',
+                      WebkitBackdropFilter: 'blur(5px)'
                     }} 
                   />
                 </div>
@@ -72,7 +72,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Headline text */}
-                <h1 className="translate-y-[-20px] relative z-10 lg:w-[105%] w-[90%] text-center text-3xl md:text-6xl xl:font-bold xl:text-5xl sm:text-3xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4 md:mb-6 break-words" style={{ zIndex: '20' }}>
+                <h1 className="translate-y-[-20px] md:translate-y-5 relative z-10 lg:w-[105%] w-[90%] text-center text-3xl md:text-6xl xl:font-bold xl:text-5xl sm:text-3xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4 md:mb-6 break-words" style={{ zIndex: '20' }}>
                   Equipping Businesses with <span className="text-gray-800">Custom software systems</span>
                   <br className="hidden sm:block" />
                 </h1>
@@ -85,22 +85,23 @@ export default function HeroSection() {
                   <span className="font-semibold text-black"> and custom business software tailored to your operations.</span>
                 </p>
               </div>
-              <div className="md:translate-y-[-40px] justify-center flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <a 
-                  href="#contact" 
-                  className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200"
-                >
-                  Discuss Your Workflow
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </a>
+              <div className="translate-y-[-30px] md:translate-y-[-80px] justify-center flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a 
                   href="#how-it-works" 
                   className="inline-flex items-center justify-center px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:border-gray-400 transition"
                 >
                   See How It Works
                 </a>
+                <a 
+                  href="#contact" 
+                  className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200"
+                >
+                  Connect With Us
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </a>
+                
               </div>
-              <div className="justify-center mt-8 flex items-center gap-4 md:translate-y-[-40px]">
+              <div className="justify-center mt-8 flex items-center gap-4 md:translate-y-[-90px]">
                 <div className="flex -space-x-2">
                   {[...Array(4)].map((_, i) => (
                     <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white" />
@@ -149,15 +150,7 @@ export default function HeroSection() {
             <path d="M0,60 C50,140 100,20 150,60 C200,140 250,20 300,60 C350,140 400,20 450,60 C500,140 550,20 600,60 C650,140 700,20 750,60 C800,140 850,20 900,60 C950,140 1000,20 1050,60 C1100,140 1150,20 1200,60 L1200,0 L0,0 Z"></path>
           </svg>
         </div>
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Stop Guessing. <span className="text-blue-600">Start Knowing.</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Traditional review platforms tell you *what* rating you got. We analyze the *why* behind every interaction, 
-            diagnosing friction points across your entire user journey—<span className="font-semibold">all on autopilot.</span>
-          </p>
-        </div>
+        
       
 
       {/* Features Grid */}
@@ -170,18 +163,18 @@ export default function HeroSection() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Every Friction Point Leaves a Signal. <span className="text-blue-600">We Help You Read It.</span>
+              Every inefficient workflow reveals an opportunity for better systems. 
             </h2>
             <p className="text-xl text-gray-600">
-              Diagnostic tools that transform vague feedback into actionable operational clarity.
+              This is why Diagnostix is here to make your workflow more efficient, From friction analytics to automated diagnostics, we help you optimize every touchpoint.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
-              { icon: <BarChart3 className="w-8 h-8 text-blue-600" />, title: "Friction Analytics", desc: "Know if it's checkout, shipping, or support—instantly." },
-              { icon: <TrendingUp className="w-8 h-8 text-blue-600" />, title: "Higher Response Rates", desc: "2-click interface means customers actually complete the feedback." },
-              { icon: <Users className="w-8 h-8 text-blue-600" />, title: "Micro-Decision Insights", desc: "See exactly where users hesitate or drop off." },
-              { icon: <Clock className="w-8 h-8 text-blue-600" />, title: "Automated Weekly Diagnosis", desc: "Set it and forget it. Reports arrive automatically—zero ongoing work required." }
+              { icon: <BarChart3 className="w-8 h-8 text-blue-600" />, title: "Operational Diagnosis", desc: "Identify where workflows break down, where teams lose time, and where systems create unnecessary friction." },
+              { icon: <TrendingUp className="w-8 h-8 text-blue-600" />, title: "Workflow Mapping", desc: "Understand how information, tasks, and decisions move through your business operations." },
+              { icon: <Users className="w-8 h-8 text-blue-600" />, title: "System Architecture Planning", desc: "Design scalable software structures tailored to operational needs, automation opportunities, and future growth." },
+              { icon: <Clock className="w-8 h-8 text-blue-600" />, title: "Solution Implementation", desc: "From dashboards to internal tools and automation systems, we build and refine software around your workflow." }
             ].map((feature, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
                 <div className="bg-blue-50 w-14 h-14 rounded-lg flex items-center justify-center mb-4">

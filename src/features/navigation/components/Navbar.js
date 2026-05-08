@@ -38,7 +38,7 @@ React.useEffect(() => {
     </a>
       
       {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center space-x-8">
+      <div className="text-sm hidden lg:flex items-center space-x-8">
         <a href="#features" className="text-gray-600 hover:text-gray-900">ABOUT</a>
         <a href="#solutions" className="text-gray-600 hover:text-gray-900">SOLUTIONS</a>
         <a href="#how-it-works" className="text-gray-600 hover:text-gray-900">How it Works</a>
@@ -50,7 +50,7 @@ React.useEffect(() => {
       {/* Mobile Hamburger Button */}
       <button 
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="md:hidden p-2 rounded-lg transition"
+        className="lg:hidden p-2 rounded-lg transition"
       >
         {mobileMenuOpen ? <X className="w-6 h-6" style={{ color: 'rgb(75, 85, 99) !important' }} /> : <Menu className="w-6 h-6" style={{ color: 'rgb(75, 85, 99) !important' }} />}
       </button>
@@ -58,7 +58,7 @@ React.useEffect(() => {
     
     {/* Mobile Menu Dropdown */}
     {mobileMenuOpen && (
-      <div className="md:hidden py-4 border-t border-gray-100 bg-white/80 backdrop-blur-md">
+      <div className="lg:hidden py-4 border-t border-gray-100 bg-white/80 backdrop-blur-md">
         <div className="flex flex-col space-y-3">
           <a href="#features" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900 py-2 px-4 rounded-lg hover:bg-gray-50 transition">ABOUT</a>
           <a href="#solutions" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900 py-2 px-4 rounded-lg hover:bg-gray-50 transition">SOLUTIONS</a>
