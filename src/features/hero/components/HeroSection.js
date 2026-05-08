@@ -117,11 +117,39 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
+        
+        {/* Wavy border below hero section */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+          <svg 
+            className="relative block w-full h-20" 
+            viewBox="0 0 1200 120" 
+            preserveAspectRatio="none"
+            style={{ fill: 'rgba(34, 211, 238, 0.15)' }}
+          >
+            <path d="M0,60 C50,140 100,20 150,60 C200,140 250,20 300,60 C350,140 400,20 450,60 C500,140 550,20 600,60 C650,140 700,20 750,60 C800,140 850,20 900,60 C950,140 1000,20 1050,60 C1100,140 1150,20 1200,60 L1200,120 L0,120 Z"></path>
+          </svg>
+        </div>
       </section>
 
       {/* Problem Statement */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section id="problem-statement" className="pb-8 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style={{ 
+        background: 'var(--sea-blue-gradient-transparent) !important',
+        backgroundColor: 'transparent !important',
+        backgroundImage: 'var(--sea-blue-gradient-transparent) !important',
+        borderBottom: 'none !important'
+      }}>
+        {/* Wavy top outline */}
+        <div className="absolute top-0 left-0 w-full overflow-hidden">
+          <svg 
+            className="relative block w-full h-20" 
+            viewBox="0 0 1200 120" 
+            preserveAspectRatio="none"
+            style={{ fill: 'rgba(34, 211, 238, 0.15)' }}
+          >
+            <path d="M0,60 C50,140 100,20 150,60 C200,140 250,20 300,60 C350,140 400,20 450,60 C500,140 550,20 600,60 C650,140 700,20 750,60 C800,140 850,20 900,60 C950,140 1000,20 1050,60 C1100,140 1150,20 1200,60 L1200,0 L0,0 Z"></path>
+          </svg>
+        </div>
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Stop Guessing. <span className="text-blue-600">Start Knowing.</span>
           </h2>
@@ -132,10 +160,13 @@ export default function HeroSection() {
         </div>
       
 
-      </section>
-
       {/* Features Grid */}
-      <section id="features" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div id="features" className="pt-8 px-4 sm:px-6 lg:px-8 relative overflow-hidden" style={{ 
+        backgroundColor: 'transparent !important',
+        backgroundImage: 'var(--sea-blue-gradient-transparent) !important',
+        borderTop: '1px solid rgba(34, 211, 238, 0.1) !important',
+        borderBottom: 'none !important'
+      }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -161,6 +192,19 @@ export default function HeroSection() {
               </div>
             ))}
           </div>
+        </div>
+        </div>
+        
+        {/* Wavy bottom outline */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden">
+          <svg 
+            className="relative block w-full h-20" 
+            viewBox="0 0 1200 120" 
+            preserveAspectRatio="none"
+            style={{ fill: 'rgba(34, 211, 238, 0.15)' }}
+          >
+            <path d="M0,60 C50,20 100,140 150,60 C200,20 250,140 300,60 C350,20 400,140 450,60 C500,20 550,140 600,60 C650,20 700,140 750,60 C800,20 850,140 900,60 C950,20 1000,140 1050,60 C1100,20 1150,140 1200,60 L1200,120 L0,120 Z"></path>
+          </svg>
         </div>
       </section>
 
