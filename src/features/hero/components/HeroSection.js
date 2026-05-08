@@ -26,12 +26,12 @@ export default function HeroSection() {
   return (
     <>
 {/* Hero Section */}
-      <section id="hero" className="pt-20 sm:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden ">
+      <section id="hero" className="pt-20 sm:pt-28 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden h-[auto]">
         {/* Background image with overlay */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/backroung.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} />
         
-        {/* Light overlay for text readability */}
-        <div className="absolute inset-0 bg-white/60" />
+        {/* Sea blue gradient overlay for blending */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/100 via-cyan-500/600 to-blue-100/10" />
         
         {/* Content container */}
         <div className="relative z-10">
@@ -39,7 +39,7 @@ export default function HeroSection() {
           <div className="flex justify-center items-center min-h-[80vh] overflow-hidden w-full max-w-full">
             <div className=" bg-transparent !important" style={{ backgroundColor: 'transparent !important' }}>
               {/* Orbital ring wrapper with sea blue glass effect */}
-              <div className="relative mx-auto max-w-4xl py-12 sm:py-16 lg:py-20">
+              <div className="relative mx-auto max-w-4xl py-12 sm:py-16 lg:py-20 translate-y-20 sm:translate-y-0 lg:translate-y-0">
                 
                 {/* Outer orbital ring - sea blue glass */}
                 <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: '1' }}>
@@ -57,7 +57,7 @@ export default function HeroSection() {
                 </div>
 
                 {/* Inner orbital ring - deeper sea blue glass */}
-                <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: '2' }}>
+                <div className="absolute lg:w-[100%] w-[90%] inset-0 flex items-center justify-center" style={{ zIndex: '2' }}>
                   <div 
                     className="w-[85%] h-24 sm:h-28 lg:h-36 rounded-[50%] border"
                     style={{ 
@@ -72,20 +72,20 @@ export default function HeroSection() {
                 </div>
 
                 {/* Headline text */}
-                <h1 className="relative z-10 text-center text-2xl sm:text-3xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4 md:mb-6 break-words" style={{ zIndex: '20' }}>
+                <h1 className="translate-y-[-20px] relative z-10 lg:w-[105%] w-[90%] text-center text-3xl md:text-6xl xl:font-bold xl:text-5xl sm:text-3xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4 md:mb-6 break-words" style={{ zIndex: '20' }}>
                   Equipping Businesses with <span className="text-gray-800">Custom software systems</span>
                   <br className="hidden sm:block" />
                 </h1>
 
               </div>
               
-              <div className="max-w-3xl mx-auto mb-60">
+              <div className="max-w-3xl mx-auto mb-60 md:translate-y-[-90px] translate-y-0 lg:-translate-y-20">
                 <p className="text-center text-sm sm:text-lg text-black mb-8 sm:mb-12">
                   Diagnose the exact friction points in your business or beyond, provides efficient and automation tools such as Inventory systems, dashboards, , internal platforms, 
                   <span className="font-semibold text-black"> and custom business software tailored to your operations.</span>
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="md:translate-y-[-40px] justify-center flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <a 
                   href="#contact" 
                   className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200"
@@ -100,13 +100,13 @@ export default function HeroSection() {
                   See How It Works
                 </a>
               </div>
-              <div className="mt-8 flex items-center gap-4">
+              <div className="justify-center mt-8 flex items-center gap-4 md:translate-y-[-40px]">
                 <div className="flex -space-x-2">
                   {[...Array(4)].map((_, i) => (
                     <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white" />
                   ))}
                 </div>
-                <p className="text-gray-800">
+                <p className="text-gray-800 md:tran">
                   <span className="font-bold text-gray-800">47+ store owners</span> already joined the waitlist
                 </p>
               </div>
@@ -117,9 +117,10 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-      
+      </section>
 
       {/* Problem Statement */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Stop Guessing. <span className="text-blue-600">Start Knowing.</span>
@@ -129,6 +130,8 @@ export default function HeroSection() {
             diagnosing friction points across your entire user journey—<span className="font-semibold">all on autopilot.</span>
           </p>
         </div>
+      
+
       </section>
 
       {/* Features Grid */}
