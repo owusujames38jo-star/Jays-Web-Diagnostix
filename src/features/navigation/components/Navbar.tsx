@@ -2,7 +2,9 @@
 import { Menu, X } from "lucide-react";
 import React from 'react';
 
-export default function Navbar() {
+interface NavbarProps {}
+
+export default function Navbar({}: NavbarProps) {
 const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 const [scrolled, setScrolled] = React.useState(false);
 
@@ -30,8 +32,8 @@ React.useEffect(() => {
         <div className="absolute inset-0 bg-blue-600/20 rounded-lg blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>
       <div className="flex flex-col">
-        <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-indigo-700 transition-all duration-300">
-        Diagnostix
+        <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-gray-800 to-indigo-600 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-indigo-700 transition-all duration-300">
+        Workflow Labs
         </span>
         <span className="text-gray-600 text-xs xs:text-xs font-normal -mt-1 group-hover:text-blue-600 transition-colors duration-300">The tool for Your Platform</span> 
       </div>

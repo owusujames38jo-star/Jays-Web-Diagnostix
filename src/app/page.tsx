@@ -4,7 +4,7 @@ import Footer from "../features/footer/components/footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden w-full max-w-full">
+    <div className="min-h-screen bg-transparent text-white overflow-x-hidden w-full max-w-full">
       <Navbar />
       <HeroSection />
       <Footer />

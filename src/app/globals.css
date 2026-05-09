@@ -1,191 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  background-image: url(/backroung.png);
-  --background: #63a6ff;
-  --foreground: #171717;
+  --background: transparent;
+  --foreground: #f8fafc;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background: transparent;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
-/* Fix for 768px tablet overflow */
-@media (min-width: 768px) and (max-width: 1023px) {
-  body {
-    overflow-x: hidden;
-  }
-  
-  .swiper,
-  .swiper-wrapper,
-  .swiper-slide {
-    max-width: 100% !important;
-    overflow: hidden !important;
-  }
-  
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-}
-
-/* ============================================ */
-/* SUBTLE GLASS EFFECTS                         */
-/* ============================================ */
-
-/* Navigation - subtle glass */
-nav {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-}
-
-/* Hero section - very subtle */
-section:first-of-type {
-  background: linear-gradient(135deg, rgba(71, 93, 114, 0.8), rgba(71, 124, 173, 0.9)) !important;
-  backdrop-filter: blur(4px) !important;
-  -webkit-backdrop-filter: blur(4px) !important;
-}
-
-/* Cards and containers - subtle elevation */
-.bg-white {
-  background-color: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-}
-
-.bg-gray-50 {
-  background-color: rgba(249, 250, 251, 0.85) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-}
-
-/* Feature cards - more opaque for readability */
-.feature-card,
-.grid > div {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-}
-
-/* Mobile menu button icons override */
-nav button svg {
-  color: rgb(75, 85, 99) !important;
-  fill: rgb(75, 85, 99) !important;
-}
-
-/* Mobile hero section responsiveness */
-@media (max-width: 768px) {
-  #hero {
-    /* Adjust height for mobile so the image fits better */
-    min-height: 50vh; 
-    /* Use a slightly different position if the text gets cut off */
-    background-position: 50% 50%; 
-  }
-}
-
-/* Problem statement section - transparent background */
-#problem-statement {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* Also target by class as fallback */
-section[id="problem-statement"] {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* Override any bg-gray-50 class */
-section#problem-statement.bg-gray-50 {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* Features grid section - transparent background */
-#features {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* Also target by class as fallback */
-section[id="features"] {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* Override any bg-gray-50 class */
-section#features.bg-gray-50 {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* CSS Custom Properties for transparent sea blue gradient */
-:root {
-  --sea-blue-gradient-transparent: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(34, 211, 238, 0.2) 50%, rgba(59, 130, 246, 0.05) 100%) !important;
-  --faded-outline: rgba(34, 211, 238, 0.1) !important;
-}
-
-/* Override body background inheritance with transparent sea blue gradient */
-section#problem-statement,
-section#features {
-  background: var(--sea-blue-gradient-transparent) !important;
-  background-image: var(--sea-blue-gradient-transparent) !important;
-  background-color: transparent !important;
-}
-
-/* Add border only to features grid for faded outline */
-section#features {
-  border-top: 1px solid var(--faded-outline) !important;
-}
-
-/* Force transparent sea blue gradient for these sections */
-body section#problem-statement,
-body section#features {
-  background: var(--sea-blue-gradient-transparent) !important;
-  background-image: var(--sea-blue-gradient-transparent) !important;
-  background-color: transparent !important;
-}
-
-/* Ultra-specific selectors */
-html body section#problem-statement,
-html body section#features {
-  background: var(--sea-blue-gradient-transparent) !important;
-  background-image: var(--sea-blue-gradient-transparent) !important;
-  background-color: transparent !important;
-}
-
-/* Override any possible conflicting classes */
-section#problem-statement[class*="bg-"],
-section#features[class*="bg-"] {
-  background: var(--sea-blue-gradient-transparent) !important;
-  background-image: var(--sea-blue-gradient-transparent) !important;
-  background-color: transparent !important;
-}
-
-/* Add border only to features grid for faded outline */
-section#features {
-  border-top: 1px solid var(--faded-outline) !important;
-}
-
-/* Contact form card */
-form,
-.bg-white.rounded-2xl.shadow-lg {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
+/* Optional subtle selection color */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
 }

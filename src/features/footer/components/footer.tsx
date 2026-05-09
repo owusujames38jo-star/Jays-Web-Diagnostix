@@ -1,11 +1,12 @@
-
 "use client";
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
 import React from 'react';
 
-export default function Footer() {
+interface FooterProps {}
+
+export default function Footer({}: FooterProps) {
   return (
     <>
 {/* Footer */}
