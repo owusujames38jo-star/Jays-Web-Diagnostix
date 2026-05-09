@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   Star,  
   BarChart3, 
@@ -111,6 +111,51 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
     }
   ];
 
+  // Reusable component for step images with lightbox
+  const StepImage = ({ src, alt }: { src: string; alt: string }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+      <>
+        {/* Thumbnail */}
+        <div 
+          className="w-80 h-80 rounded-full overflow-hidden mx-auto mb-4 cursor-pointer hover:scale-105 transition-transform duration-300 bg-white flex items-center justify-center"
+          onClick={() => setIsOpen(true)}
+        >
+          <img 
+            src={src} 
+            alt={alt} 
+            className="w-full h-full object-contain p-2"
+            style={{ imageRendering: '-webkit-optimize-contrast' as const }}
+          />
+        </div>
+
+        {/* Lightbox Overlay */}
+        {isOpen && (
+          <div 
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+            onClick={() => setIsOpen(false)}
+          >
+            <div className="relative max-w-[70vw] max-h-[70vh]">
+              <img 
+                src={src} 
+                alt={alt} 
+                className="max-w-full max-h-[70vh] object-contain rounded-lg"
+                onClick={(e) => e.stopPropagation()}
+              />
+              <button
+                className="absolute -top-10 right-0 text-white hover:text-gray-300 transition"
+                onClick={() => setIsOpen(false)}
+              >
+                <span className="text-2xl">×</span>
+              </button>
+            </div>
+          </div>
+        )}
+      </>
+    );
+  };
+
   return (
     <>
 {/* Hero Section */}
@@ -192,12 +237,18 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             {steps.map((item, idx) => (
               <div key={idx} className="relative">
                 {idx < 3 && (
-                  <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-blue-200 -z-10" />
+                  <div className="hidden md:block absolute top-40 left-full w-full h-0.5 bg-blue-200 -z-10" />
                 )}
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                    {item.step}
-                  </div>
+                  {idx === 0 ? (
+                    <StepImage src="/OperationalDiscovery.png" alt="Operational Discovery" />
+                  ) : idx === 1 ? (
+                    <StepImage src="/WorkflowSystemDiagnosis.png" alt="Workflow System Diagnosis" />
+                  ) : idx === 2 ? (
+                    <StepImage src="/SolutionArchitecture.png" alt="Solution Architecture" />
+                  ) : (
+                    <StepImage src="/ImplementationOptimization.png" alt="Implementation & Optimization" />
+                  )}
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600">{item.desc}</p>
                 </div>
