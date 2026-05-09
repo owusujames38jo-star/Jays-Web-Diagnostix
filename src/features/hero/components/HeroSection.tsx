@@ -11,7 +11,9 @@ import {
   Send,
   TrendingUp,
   Users,
-  Clock
+  Clock,
+  Zap,
+  Package
 } from 'lucide-react';
 
 // TypeScript interfaces for component props and data structures
@@ -258,39 +260,125 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         </div>
       </section>
 
-      {/* Solutions / Services Section */}
-      <section id="solutions" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      {/* Solutions Grid Section */}
+      <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Software Systems Built Around Operational Clarity
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              Operational Systems That Drive Business Forward
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From internal dashboards to workflow automation and operational platforms, every system is designed around how your business actually functions.
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              From internal dashboards to workflow automation, each system is engineered around how your business actually operates.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
-            {/* Future Tool Placeholder */}
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden opacity-75 hover:opacity-100 transition">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Example Solutions</h3>
-                <p className="text-purple-100">Coming Q3 2026 • Identify exactly where users drop off in your funnel.</p>
-              </div>
-              <div className="p-6">
-                <ul className="space-y-3">
-                  {solutionItems.map((item, i) => (
-                    <li key={i} className="flex items-start">
-                      <CheckCircle2 className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6">
-                  <span className="inline-flex items-center text-gray-400 font-semibold">
-                    Notify Me When Ready <ArrowRight className="ml-2 w-4 h-4" />
-                  </span>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Internal Operations Dashboard */}
+            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl backdrop-blur-md hover:border-blue-500/40 transition-all duration-300 p-8 hover:shadow-2xl hover:shadow-blue-500/10">
+              <div className="flex items-center mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                  <BarChart3 className="w-7 h-7 text-white" />
                 </div>
+                <h3 className="text-2xl font-bold text-white">Internal Operations Dashboard</h3>
               </div>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Centralize analytics, reporting, operational visibility, and team workflows into one unified platform.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                  Real-time operational metrics
+                </li>
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                  Team performance tracking
+                </li>
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                  Custom reporting dashboards
+                </li>
+              </ul>
+            </div>
+
+            {/* Workflow Automation System */}
+            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl backdrop-blur-md hover:border-blue-500/40 transition-all duration-300 p-8 hover:shadow-2xl hover:shadow-blue-500/10">
+              <div className="flex items-center mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+                  <Zap className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Workflow Automation System</h3>
+              </div>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Reduce repetitive manual tasks and automate operational processes across departments.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                  Automated task routing
+                </li>
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                  Process workflow builder
+                </li>
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                  Cross-department integration
+                </li>
+              </ul>
+            </div>
+
+            {/* Inventory & Fulfillment Platform */}
+            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl backdrop-blur-md hover:border-blue-500/40 transition-all duration-300 p-8 hover:shadow-2xl hover:shadow-blue-500/10">
+              <div className="flex items-center mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4">
+                  <Package className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Inventory & Fulfillment Platform</h3>
+              </div>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Track inventory movement, fulfillment workflows, logistics, and operational performance in real time.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Real-time inventory tracking
+                </li>
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Order fulfillment automation
+                </li>
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Logistics coordination
+                </li>
+              </ul>
+            </div>
+
+            {/* Business Intelligence Portal */}
+            <div className="bg-slate-900/60 border border-slate-800 rounded-2xl backdrop-blur-md hover:border-blue-500/40 transition-all duration-300 p-8 hover:shadow-2xl hover:shadow-blue-500/10">
+              <div className="flex items-center mb-6">
+                <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4">
+                  <TrendingUp className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Business Intelligence Portal</h3>
+              </div>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Monitor operational metrics, performance trends, and business insights through centralized dashboards.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+                  Advanced analytics dashboard
+                </li>
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+                  Performance trend analysis
+                </li>
+                <li className="flex items-center text-gray-400">
+                  <CheckCircle2 className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+                  Custom business insights
+                </li>
+              </ul>
             </div>
           </div>
         </div>
