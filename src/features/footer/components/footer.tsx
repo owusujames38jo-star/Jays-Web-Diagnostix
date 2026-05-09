@@ -1,8 +1,4 @@
 "use client";
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/autoplay';
-import React from 'react';
 
 interface FooterProps {}
 
