@@ -119,7 +119,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       <>
         {/* Thumbnail */}
         <div 
-          className="w-80 h-80 rounded-full overflow-hidden mx-auto mb-4 cursor-pointer hover:scale-105 transition-transform duration-300 bg-white flex items-center justify-center"
+          className="w-48 h-48 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-60 lg:h-60 xl:w-80 xl:h-80 rounded-full overflow-hidden mx-auto mb-4 cursor-pointer hover:scale-105 transition-transform duration-300 bg-white flex items-center justify-center"
           onClick={() => setIsOpen(true)}
         >
           <img 
@@ -233,7 +233,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
               From workflow analysis to implementation, every step is designed to uncover bottlenecks and engineer scalable business solutions.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {steps.map((item, idx) => (
               <div key={idx} className="relative">
                 {idx < 3 && (
