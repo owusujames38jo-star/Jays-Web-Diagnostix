@@ -54,9 +54,9 @@ React.useEffect(() => {
           FEATURES
           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 group-hover:w-full transition-all duration-300 ease-out"></span>
         </a>
-        <a href="#contact" className="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 ease-out font-medium">
+        <a href="#contact" className="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 ease-out font-medium text-sm">
           Contact Us
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl blur-md opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg blur-md opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
         </a>
       </div>
       
@@ -76,7 +76,7 @@ React.useEffect(() => {
           <a href="#features" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-gray-900 py-3 px-4 rounded-xl hover:bg-white/20 transition-all duration-300 font-medium">ABOUT</a>
           <a href="#solutions" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-gray-900 py-3 px-4 rounded-xl hover:bg-white/20 transition-all duration-300 font-medium">SOLUTIONS</a>
           <a href="#how-it-works" onClick={() => setMobileMenuOpen(false)} className="text-gray-700 hover:text-gray-900 py-3 px-4 rounded-xl hover:bg-white/20 transition-all duration-300 font-medium">FEATURES</a>
-          <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-3 rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 font-medium text-center">
+          <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 font-medium text-center text-sm">
             Contact Us
           </a>
         </div>

@@ -232,7 +232,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         {showConnectButton && (
           <a 
             href="#contact" 
-            className="fixed bottom-8 right-8 inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200 z-50"
+            className="fixed bottom-8 right-8 inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white font-medium text-sm rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-200 z-50"
           >
             Connect With Us
             <ArrowRight className="ml-2 w-3 h-3" />
