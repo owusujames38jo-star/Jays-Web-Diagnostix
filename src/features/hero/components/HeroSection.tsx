@@ -189,7 +189,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         <div className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-center items-center min-h-screen max-w-full pt-20 md:pt-50">
-            <div className="text-center mb-24">
+            <div className="text-center mb-38">
               {/* Orbital ring wrapper - single decorative ring around text */}
               <div className="relative mx-auto max-w-4xl py-4 sm:py-12 lg:py-16 md:mt-10">
                 
