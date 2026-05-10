@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Star,  
   BarChart3, 
@@ -41,6 +41,23 @@ type SolutionItem = string;
 interface HeroSectionProps {}
 
 const HeroSection: React.FC<HeroSectionProps> = () => {
+  const [showConnectButton, setShowConnectButton] = React.useState(true);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        const rect = contactSection.getBoundingClientRect();
+        const isInContactArea = rect.top <= window.innerHeight && rect.bottom >= 0;
+        setShowConnectButton(!isInContactArea);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial position
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // Typed data arrays
   const features: Feature[] = [
     { 
@@ -212,13 +229,15 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         </div>
         
         {/* Connect With Us button - fixed to bottom near footer */}
-        <a 
-          href="#contact" 
-          className="fixed bottom-8 right-8 inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200 z-50"
-        >
-          Connect With Us
-          <ArrowRight className="ml-2 w-3 h-3" />
-        </a>
+        {showConnectButton && (
+          <a 
+            href="#contact" 
+            className="fixed bottom-8 right-8 inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200 z-50"
+          >
+            Connect With Us
+            <ArrowRight className="ml-2 w-3 h-3" />
+          </a>
+        )}
         
        
       </section>
