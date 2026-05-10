@@ -385,30 +385,42 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Trusted by Forward-Thinking Store Owners
-            </h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-gray-50 p-6 rounded-xl border border-gray-100">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 italic mb-4">"{t.quote}"</p>
-                <div>
-                  <p className="font-semibold text-gray-900">{t.author}</p>
-                  <p className="text-gray-500 text-sm">{t.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section className="pt-16 px-4 sm:px-6 lg:px-8 relative" style={{ paddingBottom: '30rem' }}>
+        {/* Background image */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/Introduction.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} />
+        
+        
+        {/* Bottom wave – same wave count, left side wavier, right side flatter */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+          <svg
+            className="block w-full h-20 md:h-24"
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="white"
+              d="M0,60 
+                  C240,120 480,0 720,60 
+                  C960,120 1200,0 1440,60 
+                  L1440,120 L0,120 Z"
+            />
+          </svg>
         </div>
+        
+        
+          <div className="relative z-10 max-w-7xl mx-auto mt-50">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Workflow Infrastructure
+            </h2>
+            <h3 className="text-xl text-gray-300 mb-4">
+             Engineered systems for modern business operations.
+            </h3>
+            <p className="text-sm text-gray-300">
+              Operational dashboards, automation platforms, and <br /> internal systems designed to improve efficiency,
+              <br /> visibility, and scalability across your organization.
+            </p>
+          </div>
+
       </section>
 
       {/* Contact Section with Form */}
@@ -417,7 +429,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                Let's Diagnose Your Platform Together
+                Let’s Design Smarter Workflows Together or follow up for updates.
               </h2>
               <p className="text-xl text-gray-600 mb-8">
                 Interested in our diagnostic tools? Leave your details and we'll reach out with early access opportunities.
