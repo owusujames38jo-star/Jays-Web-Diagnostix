@@ -192,10 +192,10 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                 </div>
 
                 {/* Headline text - perfectly centered */}
-                <h1 className="relative z-10 w-full max-w-5xl mx-auto text-center text-3xl md:text-6xl xl:text-7xl sm:text-3xl lg:text-6xl font-bold text-gray-800 leading-tight mb-2 md:mb-4 lg:mb-2">
+                <h1 className="relative z-10 w-full max-w-5xl mx-auto text-center text-3xl md:text-6xl xl:text-7xl sm:text-3xl lg:text-6xl font-bold text-gray-800 leading-tight mb-2 md:mb-12 lg:mb-16">
                   Operational software for modern businesses.
                 </h1>
-                <p className="text-center text-sm sm:text-lg text-black mb-6 sm:mb-8">
+                <p className="text-center text-sm sm:text-lg text-black mb-6 sm:mb-8 lg:mb-24">
                   We analyze workflows, identify operational bottlenecks, and engineer scalable software solutions tailored to how your business actually works.
                 </p>
               </div>
@@ -211,10 +211,10 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
           </div>
         </div>
         
-        {/* Connect With Us button - bottom right corner */}
+        {/* Connect With Us button - fixed to bottom near footer */}
         <a 
           href="#contact" 
-          className="absolute bottom-8 right-8 inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200 z-20"
+          className="fixed bottom-8 right-8 inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200 z-50"
         >
           Connect With Us
           <ArrowRight className="ml-2 w-3 h-3" />
