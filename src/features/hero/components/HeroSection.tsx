@@ -189,7 +189,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         <div className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-center items-center min-h-screen max-w-full pt-20 md:pt-50">
-            <div className="text-center">
+            <div className="text-center mb-24">
               {/* Orbital ring wrapper - single decorative ring around text */}
               <div className="relative mx-auto max-w-4xl py-4 sm:py-12 lg:py-16 md:mt-10">
                 
@@ -210,7 +210,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
 
                 {/* Headline text - perfectly centered */}
                 <h1 className="relative z-10 w-full max-w-5xl mx-auto text-center text-3xl md:text-6xl xl:text-7xl sm:text-3xl lg:text-6xl font-bold text-gray-800 leading-tight mb-2 md:mb-12 lg:mb-16">
-                  Operational software for modern businesses.
+                  Operational Software for Modern Businesses.
                 </h1>
                 <p className="text-center text-sm sm:text-lg text-black mb-6 sm:mb-8 lg:mb-24">
                   We analyze workflows, identify operational bottlenecks, and engineer scalable software solutions tailored to how your business actually works.
