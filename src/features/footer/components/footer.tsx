@@ -11,7 +11,7 @@ export default function Footer({}: FooterProps) {
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0">
             <div className="mb-4 lg:mb-0 text-center lg:text-left">
               <span className="text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                Workflow Diagnostix
+                Jays Systems
               </span>
               <p className="text-gray-500 text-xs sm:text-sm mt-1">© 2026 All rights reserved.</p>
             </div>

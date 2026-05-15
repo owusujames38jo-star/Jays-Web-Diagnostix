@@ -34,7 +34,7 @@ React.useEffect(() => {
       </div>
       <div className="flex flex-col">
         <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-gray-900 via-blue-600 to-indigo-600 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:via-blue-600 group-hover:to-indigo-700 transition-all duration-500 ease-out">
-        Workflow Labs
+        Jays Systems
         </span>
         <span className="text-gray-600 text-xs font-medium -mt-1 group-hover:text-blue-600 transition-colors duration-500">Operational Software Systems</span> 
       </div>

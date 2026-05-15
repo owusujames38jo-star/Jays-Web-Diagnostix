@@ -264,7 +264,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                   {idx === 0 ? (
                     <StepImage src="/OperationalDiscovery.png" alt="Operational Discovery" />
                   ) : idx === 1 ? (
-                    <StepImage src="/WorkflowSystemDiagnosis.png" alt="Workflow System Diagnosis" />
+                    <StepImage src="/WorkflowSystemDiagnosis.png" alt="Jays Systems" />
                   ) : idx === 2 ? (
                     <StepImage src="/SolutionArchitecture.png" alt="Solution Architecture" />
                   ) : (

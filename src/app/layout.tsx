@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'Diagnostix',
-  description: 'Diagnostix - The tools for Your Platform',
+  title: 'Jays Systems',
+  description: 'operating systems for the modern world',
 };
 
 export const viewport = {
