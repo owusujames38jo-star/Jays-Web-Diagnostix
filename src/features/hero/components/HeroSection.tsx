@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
+import SolutionsSection from './SolutionsSection'; 
+import FadeInSection from './FadeInSection';
 import { 
   Star,  
   BarChart3, 
@@ -186,6 +188,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
         <div className="fixed inset-0 bg-gradient-to-br from-white/100 via-cyan-500/600 to-blue-100/10" style={{ zIndex: '-1' }} />
         
         {/* Content container - perfectly centered */}
+        <FadeInSection>
         <div className="relative z-10 w-full">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-center items-center min-h-screen max-w-full pt-20 md:pt-50">
@@ -213,7 +216,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                   Operational Software for Modern Businesses.
                 </h1>
                 <p className="text-center text-sm sm:text-lg text-black mb-6 sm:mb-8 lg:mb-24">
-                  We analyze workflows, identify operational bottlenecks, and engineer scalable software solutions tailored to how your business actually works.
+                  We map your operations, find the bottlenecks, and build the software that fixes them.
                 </p>
               </div>
               <div className="justify-center mt-8 flex items-center gap-4">
@@ -238,13 +241,13 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             <ArrowRight className="ml-2 w-3 h-3" />
           </a>
         )}
-        
+        </FadeInSection>
        
       </section>
 
       {/* Problem Statement & features & How It Works */}
       <section id="problem-statement" className="mt-28 sm:mt-36 lg:mt-44 pb-20 sm:pb-28 lg:pb-36 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        
+        <FadeInSection>
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
@@ -277,10 +280,12 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             ))}
           </div>
         </div>
+        </FadeInSection>
       </section>
 
       {/* Solutions Grid Section */}
       <section id="solutions" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+        <FadeInSection>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
@@ -318,6 +323,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
                 </li>
               </ul>
             </div>
+          
 
             {/* Workflow Automation System */}
             <div className="bg-slate-900/60 border border-slate-800 rounded-2xl backdrop-blur-md hover:border-blue-500/40 transition-all duration-300 p-8 hover:shadow-2xl hover:shadow-blue-500/10">
@@ -401,9 +407,12 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
             </div>
           </div>
         </div>
+        </FadeInSection>
       </section>
 
-      {/* Testimonials */}
+      <SolutionsSection />
+
+      {/*Engineering Principles*/}
       <section className="pt-16 px-4 sm:px-6 lg:px-8 relative" style={{ paddingBottom: '30rem' }}>
         {/* Background image */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/Introduction.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }} />
